@@ -164,16 +164,6 @@ This project is deployed using:
 
 ---
 
-# 📸 Screenshots
-
-## Home Interface
-
-- Upload PDFs
-- Ask questions
-- AI-generated contextual responses
-
----
-
 # 🧩 Core Functionalities
 
 ## 📄 PDF Processing
@@ -198,8 +188,6 @@ This project is deployed using:
 
 ```text
 What is Deep Learning?
-
-Explain AdaBoost Algorithm.
 
 Summarize Chapter 2.
 
@@ -256,17 +244,13 @@ Feel free to fork this repository and submit pull requests.
 
 ---
 
-# 📜 License
-
-This project is licensed under the MIT License.
-
----
-
 # 👨‍💻 Author
 
 ## Sahil Kumar
 
 - GitHub: https://github.com/sahil15573
+
+- Email: sahilkr.15573@gmail.com
 
 ---
 
