@@ -4,7 +4,7 @@ import os
 import tempfile
 import streamlit as st
 from dotenv import load_dotenv
-
+from langchain_community.vectorstores.utils import filter_complex_metadata
 from langchain_mistralai import ChatMistralAI
 from langchain_core.prompts import ChatPromptTemplate
 
@@ -156,6 +156,9 @@ if uploaded_file is not None:
         )
 
         chunks = splitter.split_documents(docs)
+
+        # Fix Chroma metadata issue
+        chunks = filter_complex_metadata(chunks)
 
         # Embedding model
         embedding_model = HuggingFaceEmbeddings(
