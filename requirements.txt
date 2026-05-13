@@ -1,0 +1,89 @@
+# =========================
+# Core Frameworks
+# =========================
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+langgraph
+
+# =========================
+# LLM Providers
+# =========================
+mistralai
+langchain-mistralai
+
+# =========================
+# Hugging Face Embeddings
+# =========================
+langchain-huggingface
+sentence-transformers
+transformers
+huggingface-hub
+sentencepiece
+
+# =========================
+# Vector Databases
+# =========================
+faiss-cpu
+chromadb
+
+# =========================
+# Document Loaders & Parsing
+# =========================
+pypdf
+pdfplumber
+pymupdf
+python-docx
+unstructured
+markdown
+beautifulsoup4
+lxml
+
+# =========================
+# Text Processing
+# =========================
+tiktoken
+nltk
+regex
+
+# =========================
+# API & Backend
+# =========================
+fastapi
+uvicorn
+python-multipart
+
+# =========================
+# Environment Variables
+# =========================
+python-dotenv
+
+# =========================
+# Data Handling
+# =========================
+pandas
+numpy
+
+# =========================
+# UI
+# =========================
+streamlit
+
+# =========================
+# Utilities
+# =========================
+tqdm
+requests
+aiohttp
+
+# =========================
+# Logging & Monitoring
+# =========================
+loguru
+
+# =========================
+# Tokenization / ML Support
+# =========================
+torch
+accelerate
