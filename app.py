@@ -7,8 +7,7 @@ from dotenv import load_dotenv
 from langchain_community.vectorstores.utils import filter_complex_metadata
 from langchain_mistralai import ChatMistralAI
 from langchain_core.prompts import ChatPromptTemplate
-
-from langchain_community.document_loaders import PyPDFLoader
+from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -146,7 +145,7 @@ if uploaded_file is not None:
             temp_pdf_path = tmp_file.name
 
         # Load PDF
-        loader = PyPDFLoader(temp_pdf_path)
+        loader = PyMuPDFLoader(temp_pdf_path)
         docs = loader.load()
 
         # Split into chunks
@@ -159,6 +158,11 @@ if uploaded_file is not None:
 
         # Fix Chroma metadata issue
         chunks = filter_complex_metadata(chunks)
+
+        # IMPORTANT CHECK
+        if not chunks:
+            st.error("No text could be extracted from this PDF.")
+            st.stop()
 
         # Embedding model
         embedding_model = HuggingFaceEmbeddings(
